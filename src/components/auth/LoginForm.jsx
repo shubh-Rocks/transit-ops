@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema } from "@/validations/auth.validation";
+import Image from "next/image";
 
 const ROLES = [
   {
@@ -76,9 +77,13 @@ export default function LoginPage() {
     <div className="grid min-h-screen lg:grid-cols-2 p-6 lg:p-20  ">
       <div className="hidden lg:flex flex-col justify-between p-12 bg-[#F6F4F5] border-[1px]">
         <div>
-          <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-lg text-sm font-bold tracking-wide text-white bg-[#714B67]">
-            TO
-          </div>
+          <Image className=""
+            src="/transitops_logo.png"
+            alt="Company Logo"
+            width={100}
+            height={100}
+          />
+
           <h1 className="text-3xl font-semibold text-[#241B22]">TransitOps</h1>
           <p className="mt-1 text-sm text-[#8F8F8F]">
             Smart Transport Operations Platform

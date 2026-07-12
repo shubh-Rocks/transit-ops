@@ -8,18 +8,23 @@ const PUBLIC_ROUTES = ["/login"];
 const ROLE_ACCESS = {
   FLEET_MANAGER: [
     "/dashboard",
+    "/fleet",
     "/vehicles",
     "/drivers",
     "/trips",
     "/maintenance",
+    "/maintenace",
+    "/fuel-expenses",
     "/expenses",
+    "/analytics",
+    "/settings",
   ],
 
   DRIVER: ["/dashboard", "/trips"],
 
   SAFETY_OFFICER: ["/dashboard", "/drivers"],
 
-  FINANCIAL_ANALYST: ["/dashboard", "/expenses"],
+  FINANCIAL_ANALYST: ["/dashboard", "/fuel-expenses", "/expenses", "/analytics"],
 };
 
 export function proxy(request) {
@@ -63,11 +68,16 @@ export function proxy(request) {
 export const config = {
   matcher: [
     "/dashboard/:path*",
+    "/fleet/:path*",
     "/vehicles/:path*",
     "/drivers/:path*",
     "/trips/:path*",
     "/maintenance/:path*",
+    "/maintenace/:path*",
+    "/fuel-expenses/:path*",
     "/expenses/:path*",
+    "/analytics/:path*",
+    "/settings/:path*",
     "/login",
   ],
 };
