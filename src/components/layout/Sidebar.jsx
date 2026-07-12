@@ -139,18 +139,6 @@ export default function Sidebar() {
           );
         })}
       </nav>
-
-      <div className="border-t border-white/10 p-5">
-        <div className="rounded-lg border border-white/10 bg-white/5 p-4">
-          <div className="flex items-center gap-2 text-sm font-semibold">
-            <ShieldCheck size={17} className="text-secondary" />
-            RBAC Enabled
-          </div>
-          <p className="mt-2 text-xs leading-5 text-white/52">
-            Navigation adapts to fleet, driver, safety, and finance roles.
-          </p>
-        </div>
-      </div>
     </aside>
   );
 }
